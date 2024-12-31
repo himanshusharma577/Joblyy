@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listing Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>JOBLY.COM</h1>
+            </div>
+            <div class="nav-option">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search jobs...">
+                <button>Search</button>
+            </div>
+            <div class="profile">
+                <a href="profilee.html"><img src="assets/profile.jpg"alt="Profile"></a>
+            </div>
+            <div class="setting">
+                <img src="assets/setting.jpg" alt="setting">
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="filters">
+                <div class="black-box">
+                    <label for="location">Location</label>
+                    <select id="location">
+                        <option value="anywhere">Anywhere</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="india">India</option>
+                    </select>
+            
+                    <label for="experience" style="margin-top: 20px;">Experience</label>
+                    <select id="experience">
+                        <option value="any">Any</option>
+                        <option value="0-2">Fresher </option>
+                        <option value="3-5">3-5 years</option>
+                        <option value="5plus">5+ years</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <div class="slider-container">
+                        <h2>Salary Range</h2>
+                        <div class="range-labels">
+                            <span id="minValue">20000</span>
+                            <span id="maxValue">150000</span>
+                        </div>
+                        <input type="range" id="salaryRange" min="20000" max="150000" step="500" value="50000" oninput="updateValue(this.value)">
+                        <p>Selected Salary: <span id="selectedValue">50000</span></p>
+                    </div>
+                    <div class="multiselect-container">
+                        <h2>Select Your Skills</h2>
+                        <select id="skills" multiple>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="php">PHP</option>
+                            <option value="csharp">C#</option>
+                        </select>
+                        <p>Selected Skills: <span id="selectedSkills">None</span></p>
+                    </div>
+                    <div class="multiselect-container">
+                        <h2>WORKING SCHEDULE</h2>
+                        <select id="skills" multiple>
+                            <option value="html">Full Time</option>
+                            <option value="css">Part Time</option>
+                            <option value="javascript">Internship</option>
+                            <option value="python">Project work</option>
+                            <option value="java">Volunteering</option>
+                           
+                        </select>
+                        <p>Selected Skills: <span id="selectedSkills">None</span></p>
+                    </div>
+                </div>
+            </div>
+           <div class="job-data">
+            <h2 class="job-header">Recommended Jobs</h2>
+            <div class="job-listings">
+               
+                <div class="job-card">
+                    <h3>Senior Software Designer</h3>
+                    <p>Company: Microsoft</p>
+                    <p>Salary: 120k</p>
+                    <button>Apply</button>
+                </div>
+                <div class="job-card">
+                    <h3>Junior Software Designer</h3>
+                    <p>Company: Apple</p>
+                    <p>Salary: 70k</p>
+                    <button>Apply</button>
+                </div>
+                <div class="job-card">
+                    <h3>Senior Motion Designer</h3>
+                    <p>Company:Airbnb </p>
+                    <p>Salary: 90k</p>
+                    <button>Apply</button>
+                </div>
+                <div class="job-card">
+                    <h3>Junior UX/UI Designer</h3>
+                    <p>Company: Amazon</p>
+                    <p>Salary: 70k</p>
+                    <button>Apply</button>
+                </div>
+                <div class="job-card">
+                    <h3>Senior UX/UI Designer</h3>
+                    <p>Company: Amazon</p>
+                    <p>Salary: 115k</p>
+                    <button>Apply</button>
+                </div>
+                <div class="job-card">
+                    <h3>Graphic Designer</h3>
+                    <p>Company: Apple</p>
+                    <p>Salary: 130k</p>
+                    <button>Apply</button>
+                </div>
+                <div class="job-card">
+                    <h3>Graphic Designer</h3>
+                    <p>Company: Sumsung</p>
+                    <p>Salary: 110k</p>
+                    <button>Apply</button>
+                </div>
+                <div class="job-card">
+                    <h3>Data Scientist</h3>
+                    <p>Company: Google</p>
+                    <p>Salary: 130k</p>
+                    <button>Apply</button>
+                </div>
+                <div class="job-card">
+                    <h3>UX Designer</h3>
+                    <p>Company: Twitter</p>
+                    <p>Salary: 125k</p>
+                    <button>Apply</button>
+                </div>
+                <!-- Repeat for more job cards -->
+            </div>
+           </div>
+           
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
